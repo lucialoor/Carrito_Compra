@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Carrito de la compra</title>
+
+	<link rel="stylesheet" href="estilos.css">
+	<script src="codigo.js"> </script>
+
+</head>
+<body>
+
+	
+	
+	<form class = "form" action = "" id ="form" name="carroCompra">
+	<div class = "formulario">
+	<h1>Carrito de la compra</h1>
+	
+		<div class = "grupo">
+		<label for="nombreArticulo">Nombre del artículo:</label>
+		<input type= "text" id = "nombreArticulo"><span id="errorArticulo"></span></form>
+
+		</div>
+		<div class = "grupo">
+		<label for="precioArticulo">Precio del artículo:</label>
+		<input type= "text" id = "precioArticulo"><span id="errorPrecio"></span>
+		</div>
+		<div class = "grupo">
+		<label for="unidades">Unidades:</label>
+		<input type="number" id="unidades"  min=1 value=1>
+		</div>
+		<div class = "grupo">
+		<input class ="button" type="button" id="addArticulos" value= "Añadir al carrito">
+		</div>
+		<div class = "grupo">
+		<label for="carrito">Artículos en el carrito:</label>
+		<input type= "text" id = "carrito" name ="">
+		</div>
+		<div class = "grupo">
+		<label for="totalCarrito">Precio total del carrito:</label>
+		<input type= "number" id = "totalCarrito" name ="">
+		</div>
+		<div class = "grupo">
+		<select id = "formaPago">
+			<option value="seleccione">--Seleccione--</option>
+			<option value="tarjeta">Tarjeta</option>
+			<option value="efectivo">Efectivo</option>
+		</select>
+		</div>
+
+		<div id= "pagoTarjeta">
+			<div class = "grupo">
+			<label for="titular">Titular tarjeta:</label>
+			<input type="text" id="titular"><span id="errorTitular"></span>
+			</div>
+			<div class = "grupo">
+			<label for="numeroTarjeta">Número tarjeta:</label>
+			<input type="text" id="numeroTarjeta"><span id="errorNumeroTarjeta"></span>
+			</div>
+			<div class = "grupo">
+			<label for="cvv">CVV: </label>
+			<input type="text" id="cvv"><span id="errorCvv"></span>
+			</div>
+		</div>
+
+		<div class = "grupo" id="pagoEfectivo">
+			<label for="importeEfectivo">Importe Efectivo:</label>
+			<input type="text" id="importeEfectivo"><span id="errorEfectivo"></span>
+		</div>
+		<div class = "grupo">
+		<label><input type="checkbox" id = "Conditions" value =""> Acepto las condiciones de compra</label>
+		<input class ="button" type="button" id="print" value= "Imprimir" disabled ="true" name="">
+		<input class ="button" type="button" id="restore" value= "Restablecer" name="">
+		</div>	
+	</form>
+</div>
+</body>
+</html>
